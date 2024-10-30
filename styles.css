@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #008080;
+    font-family: 'MS Sans Serif', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.window {
+    width: 90%;
+    max-width: 600px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    background-color: #C0C0C0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-header {
+    background-color: #000080;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.window-title {
+    font-weight: bold;
+}
+
+.window-controls {
+    display: flex;
+}
+
+.control-button {
+    background-color: #C0C0C0;
+    border: 1px solid #000;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 0.2em;
+    font-size: 0.8em;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+.window-body {
+    padding: 1.5em;
+    background-color: #FFF;
+    font-size: 1em;
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border: 2px solid #000;
+    display: block;
+    margin: 0.5em auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5em 0;
+}
+
+/* Taskbar Styles */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #C0C0C0;
+    border-top: 2px solid #000;
+    display: flex;
+    align-items: center;
+    height: 3em;
+    padding: 0 1em;
+}
+
+.start-button {
+    background-color: #000080;
+    color: #FFF;
+    border: 2px outset #FFF;
+    margin-right: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.taskbar-items {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.taskbar-item {
+    margin-left: 1em;
+    font-size: 1em;
+    white-space: nowrap;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+}
+
+.taskbar-item:hover {
+    background-color: #FFF;
+}
+
+.taskbar-item.active {
+    background-color: #FFF;
+    border: 1px solid #000;
+}
+
+/* GitHub Link in Taskbar */
+.github-link {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.github-link .fa-github {
+    margin-right: 0.3em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .window {
+        width: 95%;
+    }
+
+    .window-body {
+        padding: 1em;
+    }
+
+    .profile-pic {
+        max-width: 120px;
+    }
+
+    .taskbar {
+        height: 2.5em;
+    }
+
+    .start-button {
+        padding: 0.4em 0.8em;
+        font-size: 0.9em;
+    }
+
+    .taskbar-item {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .window-header, .window-body {
+        padding: 0.5em;
+    }
+
+    .control-button {
+        width: 1em;
+        height: 1em;
+        font-size: 0.7em;
+    }
+
+    .profile-pic {
+        max-width: 100px;
+    }
+
+    .taskbar {
+        height: 2em;
+        padding: 0 0.5em;
+    }
+
+    .start-button {
+        padding: 0.3em 0.6em;
+        font-size: 0.8em;
+    }
+
+    .taskbar-item {
+        font-size: 0.8em;
+        margin-left: 0.5em;
+    }
+}
+
+/* Content Section Transitions */
+.content-section {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Posts Container Styles */
+#posts-container {
+    margin-top: 1em;
+}
+
+.post {
+    border: 1px solid #000;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #E0E0E0;
+}
+
+.post h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.post p {
+    font-size: 1em;
+}
+
+/* Button-like Link Styles */
+.link-button {
+    display: inline-block; /* Allows padding and margins to be applied */
+    padding: 0.4em 0.8em; /* Add padding for a button feel */
+    background-color: #C0C0C0; /* Background color similar to Windows 97 */
+    color: #000080; /* Original link color */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid #000; /* Solid border */
+    border-radius: 3px; /* Slightly rounded corners */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transitions */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.link-button:visited {
+    color: #551A8B; /* Dark purple for visited links */
+}
+
+.link-button:hover {
+    background-color: #000080; /* Dark blue background on hover */
+    color: #FFF; /* Change text color to white on hover */
+}
+
+.link-button:active {
+    background-color: #0000CC; /* Darker blue when clicked */
+    color: #FFF; /* Keep text color white when clicked */
+}

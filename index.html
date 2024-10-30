@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MayIcU</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="window">
+      <div class="window-header">
+        <span class="window-title">Profile - Mayicu</span>
+        <div class="window-controls">
+          <button class="control-button">_</button>
+          <button class="control-button">□</button>
+          <button class="control-button">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <!-- About Section -->
+        <div class="content-section" id="about-section">
+          <h1>Welcome to My Profile</h1>
+          <img src="mayicu.png" alt="Profile Picture" class="profile-pic" />
+          <p>Hello! Im MAYICU (may i see you), a gamer who tryna be webdev</p>
+          <ul>
+            <li>💻 Skills: Breathing</li>
+            <li>🎨 Hobbies: Gaming, Music, Learning</li>
+            <li>
+              📬 Contact: <a href="#contact-section" class="link-button">Contact Options</a>
+            </li>
+          </ul>
+          <p>
+            If you enjoy my work and want to support me, check out my <a href="#support-section" class="link-button">Support Section</a>
+          </p>
+        </div>
+
+        <!-- Projects Section -->
+        <div
+          class="content-section"
+          id="projects-section"
+          style="display: none"
+        >
+          <h1>My Projects</h1>
+          <ul>
+            <li>💼 SPanel : A POS-App with Dashboard using PHP.</li>
+            <li>
+              🎨 Game Midi Player: A midi player for in-game music instrument.
+            </li>
+            <li>🔧 Tools: Mini tools to enhance your work progress.</li>
+            <li><img src="user-anonymous.svg">AnonPost : Post anything anonymous | <a href="https://anon.mayicu.id/" target="_blank" class="link-button">Open</a> </li>
+          </ul>
+        </div>
+
+        <!-- Support Section -->
+        <!-- Support Section -->
+        <div id="support-section" class="content-section" style="display: none">
+          <h2>Support My Work</h2>
+          <p>
+            If you enjoy my projects and want to support my work, consider
+            contributing through one of the following platforms:
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://trakteer.id/drastraea"
+                target="_blank"
+                class="btn btn-light"
+              >
+                <img
+                  src="https://profile.mayicu.id/trakteer.png"
+                  height="15px"
+                  alt="Trakteer"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://saweria.co/mayicu"
+                target="_blank"
+                class="btn btn-info"
+              >
+                <img
+                  src="https://profile.mayicu.id/saweria.png"
+                  height="15px"
+                  alt="Saweria"
+                />
+                Saweria
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://ko-fi.com/drastraea"
+                target="_blank"
+                class="btn btn-info"
+              >
+                <img src="ko-fi.svg" height="15px" alt="Ko-Fi" />
+                Ko-Fi
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="content-section" id="contact-section" style="display: none">
+          <h1>Contact Me</h1>
+          <p>You can reach me through the following methods:</p>
+          <ul>
+            <li>
+              <img src="mail.svg" alt="Instagram" width="24" height="24" />
+              Email: <a href="mailto:mayicu@mayicu.id" class="link-button">mayicu@mayicu.id</a>
+            </li>
+            <li>
+              <img src="instagram.svg" alt="Instagram" width="24" height="24" />
+              Instagram:
+              <a href="https://www.instagram.com/sams_sitorus" class="link-button" target="_blank"
+                >@sams_sitorus</a
+              >
+            </li>
+            <li>
+              <img src="Threads.svg" alt="Instagram" width="24" height="24" />
+              Threads:
+              <a href="https://www.threads.net/sams_sitorus" class="link-button" target="_blank"
+                >@sams_sitorus</a
+              >
+            </li>
+            <li>
+              <img src="github.svg" alt="GitHub" width="24" height="24" />
+              Github:
+              <a href="https://github.com/drastraea" class="link-button" target="_blank">
+                drastraea
+              </a>
+            </li>
+            <li>
+                <img src="discord.svg" alt="Discord" width="24" height="24" />
+                Discord:
+                <a href="https://discord.gg/tcebSjTD3W" class="link-button" target="_blank">
+                  Ur Space
+                </a>
+              </li>
+          </ul>
+        </div>
+
+        <!-- blog Section -->
+        <div class="content-section" id="blog-section" style="display: none">
+          <h1>Blog</h1>
+          <p>Here are some of my latest posts:</p>
+          <div id="posts-container">
+            <!-- Posts will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="taskbar">
+      <button class="start-button">Start</button>
+      <div class="taskbar-items">
+        <div class="taskbar-item active" data-target="about-section">
+          My Profile
+        </div>
+        <div class="taskbar-item" data-target="support-section">Support</div>
+        <div class="taskbar-item" data-target="projects-section">Projects</div>
+        <div class="taskbar-item" data-target="contact-section">Contact</div>
+        <div class="taskbar-item" data-target="blog-section">Blog Post</div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Tab Functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
